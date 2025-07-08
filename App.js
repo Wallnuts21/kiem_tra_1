@@ -1,20 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import FirstPage from './components/firstPage';
+import SecondPage from './components/secondPage';
+import ThirdPage from './components/thirdPage';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="LoaiHoa"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#f8f9fa',
+          },
+          headerTintColor: '#333',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      >
+        <Stack.Screen 
+          name="LoaiHoa" 
+          component={FirstPage}
+          options={{ title: 'Loaihoa' }}
+        />
+        <Stack.Screen 
+          name="Hoa" 
+          component={SecondPage}
+          options={{ title: 'Hoa' }}
+        />
+        <Stack.Screen 
+          name="CTHoa" 
+          component={ThirdPage}
+          options={{ title: 'CTHoa' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
