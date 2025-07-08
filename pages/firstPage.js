@@ -9,7 +9,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 // import { productList } from '../data/loaihoa';
-import { productList } from './loaihoa';
+import { productList } from '../components/loaihoa';
 
 const FirstPage = ({ navigation }) => {
   const renderLoaiHoa = ({ item }) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import FirstPage from './components/firstPage';
-import SecondPage from './components/secondPage';
-import ThirdPage from './components/thirdPage';
+import FirstPage from './pages/firstPage';
+import SecondPage from './pages/secondPage';
+import ThirdPage from './pages/thirdPage';
 
 const Stack = createStackNavigator();
 

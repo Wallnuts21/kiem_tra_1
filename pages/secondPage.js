@@ -8,7 +8,8 @@ import {
   Image,
   SafeAreaView,
 } from 'react-native';
-import { productList } from './hoa';
+// import { productList } from './hoa';
+import { productList } from '../components/hoa'; // Adjust the import path as necessary
 
 const SecondPage = ({ navigation, route }) => {
   const { maloai } = route.params;
